@@ -27,9 +27,9 @@
                 {{noCheckedlength}}个任务未完成
             </li>
             <li class="action">
-                <a class="active" href="#all">所有任务</a>
-                <a href="#unfinished">未完成的任务</a>
-                <a href="#finished">完成的任务</a>
+                <a href="#all" v-bind:class="{active:visibility==='all'}">所有任务</a>
+                <a href="#unfinished" v-bind:class="{active:visibility==='unfinished'}">未完成的任务</a>
+                <a href="#finished" v-bind:class="{active:visibility==='finished'}">完成的任务</a>
             </li>
         </ul>
         <h3 class="big-title">任务列表：</h3>
