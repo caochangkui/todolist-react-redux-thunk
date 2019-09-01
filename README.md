@@ -106,6 +106,12 @@ Action 发出以后，Reducer 立即算出 State，这叫做同步；Action 发�
 ### redux-thunk 用法
 
 ```
+$ npm install redux-thunk
+```
+
+
+
+```
 import { createStore, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import reducer from './reducer';
