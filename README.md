@@ -173,13 +173,3 @@ componentDidMount () {
 [https://github.com/caochangkui/todolist-react-redux-thunk](https://github.com/caochangkui/todolist-react-redux-thunk)
 
 11111
-
-22222
-33333
-44444
-
-555
-666
-
-777
-888
