@@ -3,10 +3,9 @@
 # 1. react-redux
 
 - React-Redux 是 Redux 的官方 React 绑定库。
-- 它能够使你的React组件从Redux store中读取数据，并且向 store 分发 actions 以更新数据。
-- React-Redux  并不是 Redux 内置，需要单独安装。
+- 它能够使你的 React 组件从 Redux store 中读取数据，并且向 store 分发 actions 以更新数据。
+- React-Redux 并不是 Redux 内置，需要单独安装。
 - React-Redux 一般会和 Redux 结合一起使用。
-
 
 ## react-redux 安装
 
@@ -14,10 +13,9 @@
 $ npm install react-redux
 ```
 
-
 ## Provider 和 connect
 
-#### React-Redux 提供`<Provider/>`组件，能够使你的整个app访问到Redux store中的数据:
+#### React-Redux 提供`<Provider/>`组件，能够使你的整个 app 访问到 Redux store 中的数据:
 
 App.js:
 
@@ -43,15 +41,13 @@ class App extends Component {
 export default App;
 ```
 
-#### React-Redux提供一个`connect`方法能够让你把组件和store连接起来。
+#### React-Redux 提供一个`connect`方法能够让你把组件和 store 连接起来。
 
 可以在 connect 方法中定义两个参数： `mapStateToProps`和 `mapDispatchToProps`;
 
-- [mapStateToProps(state, [ownProps]): stateProps] (Function): 如果定义该参数，组件将会监听 Redux store 的变化。任何时候，只要 Redux store 发生改变，mapStateToProps 函数就会被调用。
+- [mapStateToProps(state, [ownProps]): stateProps](Function): 如果定义该参数，组件将会监听 Redux store 的变化。任何时候，只要 Redux store 发生改变，mapStateToProps 函数就会被调用。
 
-- [mapDispatchToProps(dispatch, [ownProps]): dispatchProps] (Object or Function): 如果传递的是一个对象，那么每个定义在该对象的函数都将被当作 Redux action creator，对象所定义的方法名将作为属性名；每个方法将返回一个新的函数，函数中dispatch方法会将 action creator 的返回值作为参数执行。这些属性会被合并到组件的 props 中。
-
-
+- [mapDispatchToProps(dispatch, [ownProps]): dispatchProps] (Object or Function): 如果传递的是一个对象，那么每个定义在该对象的函数都将被当作 Redux action creator，对象所定义的方法名将作为属性名；每个方法将返回一个新的函数，函数中 dispatch 方法会将 action creator 的返回值作为参数执行。这些属性会被合并到组件的 props 中。
 
 例如：在组件<Todolist />中：
 
@@ -91,25 +87,21 @@ const mapDispatchToProps = (dispatch) => {
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
 ```
->  [redux-react API文档](http://cn.redux.js.org/docs/react-redux/api.html#api)
 
-
+> [redux-react API 文档](http://cn.redux.js.org/docs/react-redux/api.html#api)
 
 # 2. redux-thunk
 
 Action 发出以后，Reducer 立即算出 State，这叫做同步；Action 发出以后，过一段时间再执行 Reducer，这就是异步。
 
-- redux-thunk 是一个常用的 redux 异步 action 中间件。通常用来处理axios请求。
-- redux-thunk 中间件可以让 action 创建函数先不返回一 个action 对象，而是返回一个函数
-
+- redux-thunk 是一个常用的 redux 异步 action 中间件。通常用来处理 axios 请求。
+- redux-thunk 中间件可以让 action 创建函数先不返回一 个 action 对象，而是返回一个函数
 
 ### redux-thunk 用法
 
 ```
 $ npm install redux-thunk
 ```
-
-
 
 ```
 import { createStore, compose, applyMiddleware } from 'redux';
@@ -123,6 +115,7 @@ const store = createStore(
 
 export default store;
 ```
+
 applyMiddlewares() 是 Redux 的原生方法，作用是将所有中间件组成一个数组，依次执行。
 
 #### 在 actionCreator.js 中：
@@ -150,7 +143,6 @@ export const getTodoList = () => {
 }
 ```
 
-
 #### 在 reducer.js 中：
 
 ```
@@ -176,16 +168,12 @@ componentDidMount () {
 }
 ```
 
-
 # 3. react-redux 结合 redux-thunk 完整实例（todolist）
-
 
 [https://github.com/caochangkui/todolist-react-redux-thunk](https://github.com/caochangkui/todolist-react-redux-thunk)
 
-
-
 11111
 
-
-
-
+22222
+33333
+44444
